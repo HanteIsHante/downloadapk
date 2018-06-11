@@ -22,3 +22,26 @@ allprojects {
         implementation 'com.github.HanteIsHante:downloadapk:0.0.1'
     }
 ```
+
+
+
+
+### 使用
+
+
+###### PermissionCheck
+
+> 检测权限是否被授予
+
+```
+/**
+* 判断权限 集合是否获得允许
+*
+* @param permissions 权限集合
+* @return true 获得允许 false 未获得允许
+*/
+checkPermissions(vararg permissions: String)
+
+```
+
+
