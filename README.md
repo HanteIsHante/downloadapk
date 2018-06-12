@@ -44,4 +44,26 @@ checkPermissions(vararg permissions: String)
 
 ```
 
+###### 调用系统下载功能
 
+> 初始化
+
+```
+val downLoadApkManager = DownLoadApkManager.getInstance()
+```
+
+> 调用下载
+
+```
+val downLoadState:Long = downLoadApkManager.startDownLoad(context,
+                    Apkurl, ApkName, ApkMd5, ApkDesc)
+```
+
+通过md5 来判断本地是否已经存在此apk, 若是存在，直接调用安装程序进行安装
+
+>下载状态 downLoadState
+
+   1. DOWN_LOAD_INIT_ID: 下载中
+   2. DOWN_LOAD_MANAGER_UNABLE_USE: 系统下载管理器禁用状态
+   3. DOWN_LOAD_APK_HAS_EXIST:  apk 已经存在, 直接进行安装
+   4. EXTERNAL_STORAGE_NOT_EXIST: 下载位置文件夹不可用
