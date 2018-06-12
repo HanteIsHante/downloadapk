@@ -21,6 +21,12 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+        <!-- 监听系统下载完成的广播 -->
+        <receiver android:name="com.android.download_apk.receiver.ApkDownloadedBroadcast">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
