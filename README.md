@@ -67,3 +67,13 @@ val downLoadState:Long = downLoadApkManager.startDownLoad(context,
    2. DOWN_LOAD_MANAGER_UNABLE_USE: 系统下载管理器禁用状态
    3. DOWN_LOAD_APK_HAS_EXIST:  apk 已经存在, 直接进行安装
    4. EXTERNAL_STORAGE_NOT_EXIST: 下载位置文件夹不可用
+   
+   
+   
+#### apk 存储路径：Context.getExternalFilesDir
+
+获取路径:/storage/emulated/0/Android/data/应用包名/files/Download
+
+默认存在，可读写。(6.0系统可以不用向用户申请)   
+   
+   
