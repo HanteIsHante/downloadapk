@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
     package="com.android.download_apk">
     <!--网络权限问题-->
      <!--<uses-permission android:name="android.permission.INTERNET" />-->
@@ -15,6 +16,7 @@
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
             android:exported="false"
+            tools:replace="android:authorities"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
